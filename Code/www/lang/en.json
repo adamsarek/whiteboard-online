@@ -1,0 +1,134 @@
+{
+	"*language": {
+		"cs": "Czech",
+		"en": "English"
+	},
+	"*web": {
+		"title": "Whiteboard online",
+		"description": "The goal of the thesis is creation of a tool for whiteboard online sharing between partners. The tool will support sending a link for sharing, secured access, saving drawings to native image for reloading, saving to jpg/png, importing images, inserting text & free drawing."
+	},
+	"*page": {
+		"error": {
+			"400": {
+				"title": "400 Bad Request"
+			},
+			"401": {
+				"title": "401 Unauthorized"
+			},
+			"403": {
+				"title": "403 Forbidden"
+			},
+			"404": {
+				"title": "404 Page Not Found"
+			}
+		},
+		"edit": {
+			"title": "{*web.title}"
+		},
+		"view": {
+			"title": "{*web.title}"
+		},
+		"user": {
+			"title": "{*web.title}"
+		}
+	},
+	"*places": {
+		"title": "Places",
+		"group": {
+			"default": {
+				"title": "Default places",
+				"option": {
+					"whiteboard_center": "Whiteboard center"
+				}
+			}
+		}
+	},
+	"*export": {
+		"title": "Export",
+		"group": {
+			"source": {
+				"title": "Source file",
+				"option": {
+					"json": "JSON file (*.json)"
+				}
+			},
+			"image": {
+				"title": "Obrázek",
+				"option": {
+					"bmp": "BMP file (*.bmp)",
+					"jpg": "JPG file (*.jpg)",
+					"png": "PNG file (*.png)"
+				}
+			}
+		}
+	},
+	"*email": {
+		"subject": "Invitation to join online whiteboard: [WHITEBOARD]",
+		"body": "Dear user,\n\nI would like to invite you to join the online whiteboard:\n[WHITEBOARD]\n\nBest regards,\n[USER]",
+		"success": {
+			"message": "The email has been successfully sent."
+		},
+		"error": {
+			"message": "An error occured during sending the email."
+		}
+	},
+	"my_whiteboards": "My whiteboards",
+	"add_whiteboard": "Add whiteboard",
+	"whiteboard_name": "Whiteboard name",
+	"open_in_edit_mode": "Open in edit mode",
+	"open_in_view_mode": "Open in view mode",
+	"delete_whiteboard": "Delete whiteboard",
+	"whiteboards_empty": "You do not have any whiteboard yet.<br>You can create one by pressing the button above.",
+	"title_placeholder": "Type whiteboard name...",
+	"language": "Language",
+	"default": "Default",
+	"share": "Share",
+	"share_copy_link": "Copy link",
+	"share_email": "Email",
+	"manually": "Manually",
+	"share_copy_success": "The link has been successfully copied.",
+	"share_enter_email": "Enter an email",
+	"share_email_subject": "{*email.subject}",
+	"share_email_body": "{*email.body}",
+	"user_account": "User account",
+	"sign_in": "Sign in",
+	"sign_out": "Sign out",
+	"delete": "Delete",
+	"drawing_close": "Close drawing",
+	"note_close": "Close note",
+	"image_close": "Close image",
+	"shape_close": "Close shape",
+	"fill": "Fill",
+	"font_family": "Font",
+	"font_size": "Font size",
+	"text_align": "Text alignment",
+	"text_align_left": "Left",
+	"text_align_center": "Center",
+	"text_align_right": "Right",
+	"line_width": "Line width",
+	"change_image": "Change image",
+	"shape_type": "Shape type",
+	"rectangle": "Rectangle",
+	"ellipse": "Ellipse",
+	"right_triangle": "Right triangle",
+	"isosceles_triangle": "Isosceles triangle",
+	"rhombus": "Rhombus",
+	"drawing": "Drawing",
+	"note": "Note",
+	"note_content_placeholder": "Type something...",
+	"image": "Image",
+	"shape": "Shape",
+	"source_file": "Source file",
+	"grid_full": "Full grid",
+	"grid_off": "No grid",
+	"grid_half": "Half grid",
+	"theme_auto": "Automatic theme (based on local time)",
+	"theme_dark": "Dark theme",
+	"theme_light": "Light theme",
+	"zoom_in": "Zoom in",
+	"zoom_restore": "Restore the default zoom level",
+	"zoom_out": "Zoom out",
+	"fullscreen": "Full screen",
+	"fullscreen_exit": "Exit full screen",
+	"noscript": "Please enable JavaScript to use this website."
+}

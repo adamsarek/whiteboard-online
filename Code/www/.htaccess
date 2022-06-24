@@ -1,0 +1,163 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+# redirection all http -> https
+#RewriteCond %{HTTPS} off
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+# redirection -> www.
+RewriteCond %{HTTP_HOST} ^[^.]+\.[^.]+$
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# error pages
+ErrorDocument 400 /error/400
+ErrorDocument 401 /error/401
+ErrorDocument 403 /error/403
+ErrorDocument 404 /error/404
+
+RewriteRule ^error\/([^\/]+)\/? /index.php?page=error&id=$1 [QSA]
+RewriteRule ^edit\/([^\/]+)\/? /index.php?page=edit&id=$1 [QSA]
+RewriteRule ^view\/([^\/]+)\/? /index.php?page=view&id=$1 [QSA]
+
+RewriteRule ^([a-zA-Z0-9]+)$ index.php?page=$1 [QSA]
+RewriteRule ^([a-zA-Z0-9]+)/$ index.php?page=$1 [QSA]
+</IfModule>
+
+
+
+# GZip Compression
+<IfModule mod_deflate.c>
+	AddOutputFilterByType DEFLATE \
+	application/javascript \
+	application/x-javascript \
+	application/json \
+	application/xml \
+	application/x-font \
+	application/x-font-woff2 \
+	font/woff2 \
+	image/bmp \
+	image/gif \
+	image/jpg \
+	image/jpeg \
+	image/png \
+	image/svg+xml \
+	image/webp \
+	image/vnd.microsoft.icon \
+	image/x-icon \
+	text/css \
+	text/html \
+	text/javascript \
+	text/x-javascript \
+	text/plain \
+	text/xml
+</IfModule>
+
+
+
+# Cache Expires
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresDefault "access plus 1 week"
+
+	# 1 Month
+	ExpiresByType application/javascript "access plus 1 month"
+	ExpiresByType application/x-javascript "access plus 1 month"
+	ExpiresByType application/x-font "access plus 1 month"
+	ExpiresByType application/x-font-woff2 "access plus 1 month"
+	ExpiresByType font/woff2 "access plus 1 month"
+	ExpiresByType image/bmp "access plus 1 month"
+	ExpiresByType image/gif "access plus 1 month"
+	ExpiresByType image/jpg "access plus 1 month"
+	ExpiresByType image/jpeg "access plus 1 month"
+	ExpiresByType image/png "access plus 1 month"
+	ExpiresByType image/svg+xml "access plus 1 month"
+	ExpiresByType image/webp "access plus 1 month"
+	ExpiresByType image/vnd.microsoft.icon "access plus 1 month"
+	ExpiresByType image/x-icon "access plus 1 month"
+	ExpiresByType text/css "access plus 1 month"
+	ExpiresByType text/javascript "access plus 1 month"
+	ExpiresByType text/x-javascript "access plus 1 month"
+
+	# 0 Seconds
+	ExpiresByType application/json "access plus 0 seconds"
+	ExpiresByType application/xml "access plus 0 seconds"
+	ExpiresByType text/html "access plus 0 seconds"
+	ExpiresByType text/plain "access plus 0 seconds"
+	ExpiresByType text/xml "access plus 0 seconds"
+
+	# Development Mode
+#	ExpiresByType application/javascript "access plus 0 seconds"
+#	ExpiresByType application/x-javascript "access plus 0 seconds"
+#	ExpiresByType text/css "access plus 0 seconds"
+#	ExpiresByType text/javascript "access plus 0 seconds"
+#	ExpiresByType text/x-javascript "access plus 0 seconds"
+</IfModule>
+
+
+
+# Cache Control (Apache alternative)
+<IfModule mod_headers.c>
+	# 1 Month
+	<FilesMatch "\.(bmp|gif|jpg|jpeg|png|svg|webp|ico|css|js|woff2)$">
+		Header set Cache-Control "max-age=2592000, public"
+	</FilesMatch>
+
+	# 0 Seconds
+	<FilesMatch "\.(json|xml|html|txt)$">
+		Header set Cache-Control "max-age=0, public"
+	</FilesMatch>
+
+	# Development Mode
+#	<FilesMatch "\.(bmp|gif|jpg|jpeg|png|svg|webp|ico|woff2)$">
+#		Header set Cache-Control "max-age=2592000, public"
+#	</FilesMatch>
+#	<FilesMatch "\.(css|js)$">
+#		Header set Cache-Control "max-age=0, public"
+#	</FilesMatch>
+</IfModule>
+
+
+
+# Keep Alive
+<IfModule mod_headers.c>
+    Header set Connection keep-alive
+</IfModule>
+
+
+
+# Deactivate ETags
+<IfModule mod_expires.c>
+	<IfModule mod_headers.c>
+		Header unset ETag
+	</IfModule>
+
+	FileETag None
+</IfModule>
+
+
+
+# CORS policy
+<IfModule mod_headers.c>
+	<FilesMatch "\.(css|js|woff2)$">
+		Header set Access-Control-Allow-Origin "*"
+	</FilesMatch>
+</IfModule>
+
+
+
+# Remove disallowed headers
+<IfModule mod_headers.c>
+	Header unset Expires
+	Header unset Host
+	Header unset P3P
+	Header unset Pragma
+	Header unset Public-Key-Pins
+	Header unset Public-Key-Pins-Report-Only
+	Header unset Via
+	Header unset X-AspNet-Version
+	Header unset X-AspNetMvc-version
+	Header unset X-Frame-Options
+	Header unset X-Powered-By
+	Header unset X-Runtime
+	Header unset X-Version
+</IfModule>

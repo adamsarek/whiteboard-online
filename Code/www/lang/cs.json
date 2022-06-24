@@ -1,0 +1,134 @@
+{
+	"*language": {
+		"cs": "Čeština",
+		"en": "Angličtina"
+	},
+	"*web": {
+		"title": "Virtuální tabule",
+		"description": "Cílem práce je vytvoření nástroje pro sdílení virtuální tabule mezi partnery. Nástroj bude podporovat mimo jiné zaslání linku na sdílení, zabezpečený přístup, uložení nákresů, do nativní podoby pro znovunačtení, uložení do jpg/png, import obrázků, vložení textů a volné kreslení."
+	},
+	"*page": {
+		"error": {
+			"400": {
+				"title": "400 Chybný požadavek"
+			},
+			"401": {
+				"title": "401 Neautorizovaný přístup"
+			},
+			"403": {
+				"title": "403 Přístup odmítnut"
+			},
+			"404": {
+				"title": "404 Stránka nenalezena"
+			}
+		},
+		"edit": {
+			"title": "{*web.title}"
+		},
+		"view": {
+			"title": "{*web.title}"
+		},
+		"user": {
+			"title": "{*web.title}"
+		}
+	},
+	"*places": {
+		"title": "Místa",
+		"group": {
+			"default": {
+				"title": "Výchozí místa",
+				"option": {
+					"whiteboard_center": "Střed tabule"
+				}
+			}
+		}
+	},
+	"*export": {
+		"title": "Exportovat",
+		"group": {
+			"source": {
+				"title": "Zdrojový soubor",
+				"option": {
+					"json": "Soubor JSON (*.json)"
+				}
+			},
+			"image": {
+				"title": "Obrázek",
+				"option": {
+					"bmp": "Soubor BMP (*.bmp)",
+					"jpg": "Soubor JPG (*.jpg)",
+					"png": "Soubor PNG (*.png)"
+				}
+			}
+		}
+	},
+	"*email": {
+		"subject": "Pozvánka na virtuální tabuli: [WHITEBOARD]",
+		"body": "Dobrý den,\n\ntímto e-mailem bych Vás rád pozval na virtuální tabuli:\n[WHITEBOARD]\n\nS pozdravem\n[USER]",
+		"success": {
+			"message": "E-mail byl úspěšně odeslán."
+		},
+		"error": {
+			"message": "Nastala chyba při odesílání e-mailu."
+		}
+	},
+	"my_whiteboards": "Moje tabule",
+	"add_whiteboard": "Přidat tabuli",
+	"whiteboard_name": "Název tabule",
+	"open_in_edit_mode": "Otevřít v režimu úprav",
+	"open_in_view_mode": "Otevřít v režimu zobrazení",
+	"delete_whiteboard": "Smazat tabuli",
+	"whiteboards_empty": "Zatím nemáte žádnou tabuli.<br>Vytvořit si ji můžete stisknutím tlačítka výše.",
+	"title_placeholder": "Napište název tabule...",
+	"language": "Jazyk",
+	"default": "Výchozí",
+	"share": "Sdílet",
+	"share_copy_link": "Zkopírovat odkaz",
+	"share_email": "E-mail",
+	"manually": "Ručně",
+	"share_copy_success": "Odkaz byl úspěšně zkopírován.",
+	"share_enter_email": "Zadejte email",
+	"share_email_subject": "{*email.subject}",
+	"share_email_body": "{*email.body}",
+	"user_account": "Uživatelský účet",
+	"sign_in": "Přihlásit se",
+	"sign_out": "Odhlásit se",
+	"delete": "Smazat",
+	"drawing_close": "Zavřít kreslení",
+	"note_close": "Zavřít poznámku",
+	"image_close": "Zavřít obrázek",
+	"shape_close": "Zavřít tvar",
+	"fill": "Výplň",
+	"font_family": "Písmo",
+	"font_size": "Velikost písma",
+	"text_align": "Zarovnání textu",
+	"text_align_left": "Doleva",
+	"text_align_center": "Na střed",
+	"text_align_right": "Doprava",
+	"line_width": "Šířka čáry",
+	"change_image": "Změnit obrázek",
+	"shape_type": "Typ tvaru",
+	"rectangle": "Obdélník",
+	"ellipse": "Elipsa",
+	"right_triangle": "Pravoúhlý trojúhelník",
+	"isosceles_triangle": "Rovnoramenný trojúhelník",
+	"rhombus": "Kosočtverec",
+	"drawing": "Kreslení",
+	"note": "Poznámka",
+	"note_content_placeholder": "Něco napište...",
+	"image": "Obrázek",
+	"shape": "Tvar",
+	"source_file": "Zdrojový soubor",
+	"grid_full": "Plná mřížka",
+	"grid_off": "Bez mřížky",
+	"grid_half": "Poloviční mřížka",
+	"theme_auto": "Automatický motiv (dle místního času)",
+	"theme_dark": "Tmavý motiv",
+	"theme_light": "Světlý motiv",
+	"zoom_in": "Přiblížit",
+	"zoom_restore": "Obnovit výchozí úroveň přiblížení",
+	"zoom_out": "Oddálit",
+	"fullscreen": "Celá obrazovka",
+	"fullscreen_exit": "Ukončit režim celé obrazovky",
+	"noscript": "Chcete-li používat tento web, povolte JavaScript."
+}
