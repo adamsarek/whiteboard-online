@@ -1,2 +1,2 @@
-# WhiteboardOnline
-The goal of the thesis is creation of a tool for whiteboard online sharing between partners. The tool will support sending a link for sharing, secured access, saving drawings to native image for reloading, saving to jpg/png, importing images, inserting text &amp; free drawing.
+# Whiteboard Online (Bachelor Thesis)
+The goal of this work is to create a modern, responsive web application for a shared virtual whiteboard. The work focuses on optimization for the smooth running of the application and thus allows the cooperation of multiple users. Emphasis is also placed on supporting multiple types of devices. The work is inspired by the functionality of existing websites. The application offers simple tools that allow its use in a wide range of areas. Each whiteboard has two basic access modes (editing and viewing), each with its own link. The result is a functional solution for creating and sharing virtual whiteboards.
